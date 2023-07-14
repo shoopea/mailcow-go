@@ -20,7 +20,7 @@ var _ MappedNullable = &DeleteTransportMapsRequest{}
 // DeleteTransportMapsRequest struct for DeleteTransportMapsRequest
 type DeleteTransportMapsRequest struct {
 	// contains list of transport maps you want to delete
-	Items map[string]interface{} `json:"items,omitempty"`
+	Items []string `json:"items,omitempty"`
 }
 
 // NewDeleteTransportMapsRequest instantiates a new DeleteTransportMapsRequest object
@@ -41,9 +41,9 @@ func NewDeleteTransportMapsRequestWithDefaults() *DeleteTransportMapsRequest {
 }
 
 // GetItems returns the Items field value if set, zero value otherwise.
-func (o *DeleteTransportMapsRequest) GetItems() map[string]interface{} {
+func (o *DeleteTransportMapsRequest) GetItems() []string {
 	if o == nil || IsNil(o.Items) {
-		var ret map[string]interface{}
+		var ret []string
 		return ret
 	}
 	return o.Items
@@ -51,9 +51,9 @@ func (o *DeleteTransportMapsRequest) GetItems() map[string]interface{} {
 
 // GetItemsOk returns a tuple with the Items field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *DeleteTransportMapsRequest) GetItemsOk() (map[string]interface{}, bool) {
+func (o *DeleteTransportMapsRequest) GetItemsOk() ([]string, bool) {
 	if o == nil || IsNil(o.Items) {
-		return map[string]interface{}{}, false
+		return nil, false
 	}
 	return o.Items, true
 }
@@ -67,8 +67,8 @@ func (o *DeleteTransportMapsRequest) HasItems() bool {
 	return false
 }
 
-// SetItems gets a reference to the given map[string]interface{} and assigns it to the Items field.
-func (o *DeleteTransportMapsRequest) SetItems(v map[string]interface{}) {
+// SetItems gets a reference to the given []string and assigns it to the Items field.
+func (o *DeleteTransportMapsRequest) SetItems(v []string) {
 	o.Items = v
 }
 

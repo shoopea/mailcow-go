@@ -4462,8 +4462,9 @@ components:
       properties:
         items:
           description: contains list of transport maps you want to delete
-          type: object
-      type: object
+          items:
+            type: string
+          type: array
     Create_mailbox_request:
       example:
         active: "1"

@@ -2781,8 +2781,9 @@ paths:
               properties:
                 items:
                   description: contains list of transport maps you want to delete
-                  type: object
-              type: object
+                  type: array
+                  items:
+                    type: string
       summary: Delete Transport Maps
   "/api/v1/delete/mailbox/tag/{mailbox}":
     post:
